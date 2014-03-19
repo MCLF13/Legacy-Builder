@@ -34,15 +34,15 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.splitContainer2 = new System.Windows.Forms.SplitContainer();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.treeView1 = new System.Windows.Forms.TreeView();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.splitContainer2 = new System.Windows.Forms.SplitContainer();
             this.treeView2 = new System.Windows.Forms.TreeView();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.treeView3 = new System.Windows.Forms.TreeView();
+            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -75,7 +75,7 @@
             // importarToolStripMenuItem
             // 
             this.importarToolStripMenuItem.Name = "importarToolStripMenuItem";
-            this.importarToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.importarToolStripMenuItem.Size = new System.Drawing.Size(120, 22);
             this.importarToolStripMenuItem.Text = "Importar";
             // 
             // label1
@@ -114,6 +114,24 @@
             this.splitContainer1.SplitterDistance = 202;
             this.splitContainer1.TabIndex = 3;
             // 
+            // treeView1
+            // 
+            this.treeView1.Location = new System.Drawing.Point(6, 53);
+            this.treeView1.Name = "treeView1";
+            this.treeView1.Size = new System.Drawing.Size(194, 295);
+            this.treeView1.TabIndex = 3;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Brasil",
+            "Estados Unidos"});
+            this.comboBox1.Location = new System.Drawing.Point(6, 26);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(194, 21);
+            this.comboBox1.TabIndex = 2;
+            // 
             // splitContainer2
             // 
             this.splitContainer2.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -135,16 +153,12 @@
             this.splitContainer2.SplitterDistance = 202;
             this.splitContainer2.TabIndex = 0;
             // 
-            // comboBox1
+            // treeView2
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Brasil",
-            "Estados Unidos"});
-            this.comboBox1.Location = new System.Drawing.Point(6, 26);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(194, 21);
-            this.comboBox1.TabIndex = 2;
+            this.treeView2.Location = new System.Drawing.Point(3, 53);
+            this.treeView2.Name = "treeView2";
+            this.treeView2.Size = new System.Drawing.Size(194, 295);
+            this.treeView2.TabIndex = 4;
             // 
             // comboBox2
             // 
@@ -158,6 +172,22 @@
             this.comboBox2.Size = new System.Drawing.Size(194, 21);
             this.comboBox2.TabIndex = 3;
             // 
+            // treeView3
+            // 
+            this.treeView3.Location = new System.Drawing.Point(3, 53);
+            this.treeView3.Name = "treeView3";
+            this.treeView3.Size = new System.Drawing.Size(210, 295);
+            this.treeView3.TabIndex = 5;
+            // 
+            // comboBox3
+            // 
+            this.comboBox3.FormattingEnabled = true;
+            this.comboBox3.Location = new System.Drawing.Point(6, 26);
+            this.comboBox3.Name = "comboBox3";
+            this.comboBox3.Size = new System.Drawing.Size(207, 21);
+            this.comboBox3.TabIndex = 4;
+            this.comboBox3.SelectedIndexChanged += new System.EventHandler(this.comboBox3_SelectedIndexChanged);
+            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -167,18 +197,6 @@
             this.label3.TabIndex = 4;
             this.label3.Text = "Escolha a Fonte";
             // 
-            // comboBox3
-            // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Items.AddRange(new object[] {
-            "Arquivo Externo",
-            "Yahoo Finance",
-            "Google Finance"});
-            this.comboBox3.Location = new System.Drawing.Point(6, 26);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(207, 21);
-            this.comboBox3.TabIndex = 4;
-            // 
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(511, 400);
@@ -187,40 +205,23 @@
             this.button1.TabIndex = 4;
             this.button1.Text = "Executar";
             this.button1.UseVisualStyleBackColor = true;
-            // 
-            // treeView1
-            // 
-            this.treeView1.Location = new System.Drawing.Point(6, 53);
-            this.treeView1.Name = "treeView1";
-            this.treeView1.Size = new System.Drawing.Size(194, 295);
-            this.treeView1.TabIndex = 3;
-            // 
-            // treeView2
-            // 
-            this.treeView2.Location = new System.Drawing.Point(3, 53);
-            this.treeView2.Name = "treeView2";
-            this.treeView2.Size = new System.Drawing.Size(194, 295);
-            this.treeView2.TabIndex = 4;
-            // 
-            // treeView3
-            // 
-            this.treeView3.Location = new System.Drawing.Point(3, 53);
-            this.treeView3.Name = "treeView3";
-            this.treeView3.Size = new System.Drawing.Size(210, 295);
-            this.treeView3.TabIndex = 5;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(640, 504);
+            this.ClientSize = new System.Drawing.Size(640, 433);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.splitContainer1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
+            this.MaximumSize = new System.Drawing.Size(656, 471);
+            this.MinimumSize = new System.Drawing.Size(656, 471);
             this.Name = "frmMain";
             this.Text = "Legacy Builder";
+            this.Load += new System.EventHandler(this.frmMain_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.splitContainer1.Panel1.ResumeLayout(false);
