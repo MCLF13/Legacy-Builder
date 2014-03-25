@@ -21,9 +21,10 @@ namespace WindowsFormsApplication4
         {
             InitializeComponent();
             Leitura_metadados();
+            Formacao_Treeview();
         }
 
-        private string m_txt_metadados = "";
+        string m_txt_metadados = "";
 
         private void Leitura_metadados()
         {
@@ -39,6 +40,21 @@ namespace WindowsFormsApplication4
             using (StreamReader sr = new StreamReader(strEndCompleto, Encoding.GetEncoding("ISO-8859-1")))
             {
                 m_txt_metadados = sr.ReadToEnd();
+            }
+        }
+        ArrayList treeview = new ArrayList();
+
+        int aparicao;
+        
+
+        private void Formacao_Treeview()
+        {
+            string metadados = m_txt_metadados;
+            aparicao = Regex.Matches(m_txt_metadados, "\r").Count;
+            for (int i = 0; i < aparicao; i++)
+            {
+                treeview.Add(metadados.Remove(metadados.IndexOf("#")));
+                metadados = metadados.Substring(metadados.IndexOf("$") + 1);
             }
         }
 
