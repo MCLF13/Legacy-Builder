@@ -7,3 +7,12 @@
 \\vmware-host\Shared Folders\Legacy-Builder\Sharing_VM\Legacy_Builder\WindowsFormsApplication4\obj\x86\Debug\GenerateResource.write.1.tlog
 \\vmware-host\Shared Folders\Legacy-Builder\Sharing_VM\Legacy_Builder\WindowsFormsApplication4\obj\x86\Debug\WindowsFormsApplication4.exe
 \\vmware-host\Shared Folders\Legacy-Builder\Sharing_VM\Legacy_Builder\WindowsFormsApplication4\obj\x86\Debug\WindowsFormsApplication4.pdb
+C:\Users\Marcius Lima\Documents\GitHub\Legacy-Builder\Sharing_VM\Legacy_Builder\WindowsFormsApplication4\obj\x86\Debug\WindowsFormsApplication4.exe
+C:\Users\Marcius Lima\Documents\GitHub\Legacy-Builder\Sharing_VM\Legacy_Builder\WindowsFormsApplication4\obj\x86\Debug\WindowsFormsApplication4.pdb
+C:\Users\Marcius Lima\Documents\GitHub\Legacy-Builder\Sharing_VM\Legacy_Builder\WindowsFormsApplication4\bin\Debug\WindowsFormsApplication4.exe
+C:\Users\Marcius Lima\Documents\GitHub\Legacy-Builder\Sharing_VM\Legacy_Builder\WindowsFormsApplication4\bin\Debug\WindowsFormsApplication4.pdb
+C:\Users\Marcius Lima\Documents\GitHub\Legacy-Builder\Sharing_VM\Legacy_Builder\WindowsFormsApplication4\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Marcius Lima\Documents\GitHub\Legacy-Builder\Sharing_VM\Legacy_Builder\WindowsFormsApplication4\obj\x86\Debug\WindowsFormsApplication4.frmMain.resources
+C:\Users\Marcius Lima\Documents\GitHub\Legacy-Builder\Sharing_VM\Legacy_Builder\WindowsFormsApplication4\obj\x86\Debug\WindowsFormsApplication4.Properties.Resources.resources
+C:\Users\Marcius Lima\Documents\GitHub\Legacy-Builder\Sharing_VM\Legacy_Builder\WindowsFormsApplication4\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\Marcius Lima\Documents\GitHub\Legacy-Builder\Sharing_VM\Legacy_Builder\WindowsFormsApplication4\obj\x86\Debug\GenerateResource.write.1.tlog
