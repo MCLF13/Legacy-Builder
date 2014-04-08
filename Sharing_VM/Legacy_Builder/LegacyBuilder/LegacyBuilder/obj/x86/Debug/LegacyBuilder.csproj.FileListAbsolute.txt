@@ -1,0 +1,20 @@
+C:\Users\Marcius Lima\AppData\Local\Temporary Projects\LegacyBuilder\bin\Debug\LegacyBuilder.exe
+C:\Users\Marcius Lima\AppData\Local\Temporary Projects\LegacyBuilder\bin\Debug\LegacyBuilder.pdb
+C:\Users\Marcius Lima\AppData\Local\Temporary Projects\LegacyBuilder\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Marcius Lima\AppData\Local\Temporary Projects\LegacyBuilder\obj\x86\Debug\LegacyBuilder.FormMBMain.resources
+C:\Users\Marcius Lima\AppData\Local\Temporary Projects\LegacyBuilder\obj\x86\Debug\LegacyBuilder.Properties.Resources.resources
+C:\Users\Marcius Lima\AppData\Local\Temporary Projects\LegacyBuilder\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\Marcius Lima\AppData\Local\Temporary Projects\LegacyBuilder\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\Marcius Lima\AppData\Local\Temporary Projects\LegacyBuilder\obj\x86\Debug\LegacyBuilder.exe
+C:\Users\Marcius Lima\AppData\Local\Temporary Projects\LegacyBuilder\obj\x86\Debug\LegacyBuilder.pdb
+C:\Users\Marcius Lima\AppData\Local\Temporary Projects\LegacyBuilder\obj\x86\Debug\LegacyBuilder.FormLBYahoo.resources
+C:\Users\Marcius Lima\Documents\GitHub\Legacy-Builder\Sharing_VM\Legacy_Builder\LegacyBuilder\LegacyBuilder\obj\x86\Debug\LegacyBuilder.exe
+C:\Users\Marcius Lima\Documents\GitHub\Legacy-Builder\Sharing_VM\Legacy_Builder\LegacyBuilder\LegacyBuilder\obj\x86\Debug\LegacyBuilder.pdb
+C:\Users\Marcius Lima\Documents\GitHub\Legacy-Builder\Sharing_VM\Legacy_Builder\LegacyBuilder\LegacyBuilder\bin\Debug\LegacyBuilder.exe
+C:\Users\Marcius Lima\Documents\GitHub\Legacy-Builder\Sharing_VM\Legacy_Builder\LegacyBuilder\LegacyBuilder\bin\Debug\LegacyBuilder.pdb
+C:\Users\Marcius Lima\Documents\GitHub\Legacy-Builder\Sharing_VM\Legacy_Builder\LegacyBuilder\LegacyBuilder\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Marcius Lima\Documents\GitHub\Legacy-Builder\Sharing_VM\Legacy_Builder\LegacyBuilder\LegacyBuilder\obj\x86\Debug\LegacyBuilder.FormLBYahoo.resources
+C:\Users\Marcius Lima\Documents\GitHub\Legacy-Builder\Sharing_VM\Legacy_Builder\LegacyBuilder\LegacyBuilder\obj\x86\Debug\LegacyBuilder.FormMBMain.resources
+C:\Users\Marcius Lima\Documents\GitHub\Legacy-Builder\Sharing_VM\Legacy_Builder\LegacyBuilder\LegacyBuilder\obj\x86\Debug\LegacyBuilder.Properties.Resources.resources
+C:\Users\Marcius Lima\Documents\GitHub\Legacy-Builder\Sharing_VM\Legacy_Builder\LegacyBuilder\LegacyBuilder\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\Marcius Lima\Documents\GitHub\Legacy-Builder\Sharing_VM\Legacy_Builder\LegacyBuilder\LegacyBuilder\obj\x86\Debug\GenerateResource.write.1.tlog

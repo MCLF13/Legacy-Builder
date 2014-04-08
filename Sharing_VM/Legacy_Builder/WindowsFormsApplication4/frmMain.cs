@@ -223,5 +223,10 @@ namespace WindowsFormsApplication4
             WebClient client = new WebClient();
             client.DownloadFile(url, @"\\vmware-host\Shared Folders\Legacy-Builder\Sharing_VM\Legacy_Builder\WindowsFormsApplication4\bin\Debug\Dados.csv");
         }
+
+        private void frmMain_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
