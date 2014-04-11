@@ -18,3 +18,14 @@ C:\Users\Marcius Lima\Documents\GitHub\Legacy-Builder\Sharing_VM\Legacy_Builder\
 C:\Users\Marcius Lima\Documents\GitHub\Legacy-Builder\Sharing_VM\Legacy_Builder\LegacyBuilder\LegacyBuilder\obj\x86\Debug\LegacyBuilder.Properties.Resources.resources
 C:\Users\Marcius Lima\Documents\GitHub\Legacy-Builder\Sharing_VM\Legacy_Builder\LegacyBuilder\LegacyBuilder\obj\x86\Debug\GenerateResource.read.1.tlog
 C:\Users\Marcius Lima\Documents\GitHub\Legacy-Builder\Sharing_VM\Legacy_Builder\LegacyBuilder\LegacyBuilder\obj\x86\Debug\GenerateResource.write.1.tlog
+\\vmware-host\Shared Folders\Legacy-Builder\Sharing_VM\Legacy_Builder\LegacyBuilder\LegacyBuilder\obj\x86\Debug\LegacyBuilder.exe
+\\vmware-host\Shared Folders\Legacy-Builder\Sharing_VM\Legacy_Builder\LegacyBuilder\LegacyBuilder\obj\x86\Debug\LegacyBuilder.pdb
+\\vmware-host\Shared Folders\Legacy-Builder\Sharing_VM\Legacy_Builder\LegacyBuilder\LegacyBuilder\bin\Debug\LegacyBuilder.exe
+\\vmware-host\Shared Folders\Legacy-Builder\Sharing_VM\Legacy_Builder\LegacyBuilder\LegacyBuilder\bin\Debug\LegacyBuilder.pdb
+\\vmware-host\Shared Folders\Legacy-Builder\Sharing_VM\Legacy_Builder\LegacyBuilder\LegacyBuilder\obj\x86\Debug\ResolveAssemblyReference.cache
+\\vmware-host\Shared Folders\Legacy-Builder\Sharing_VM\Legacy_Builder\LegacyBuilder\LegacyBuilder\obj\x86\Debug\LegacyBuilder.FormLBGoogle.resources
+\\vmware-host\Shared Folders\Legacy-Builder\Sharing_VM\Legacy_Builder\LegacyBuilder\LegacyBuilder\obj\x86\Debug\LegacyBuilder.FormLBYahoo.resources
+\\vmware-host\Shared Folders\Legacy-Builder\Sharing_VM\Legacy_Builder\LegacyBuilder\LegacyBuilder\obj\x86\Debug\LegacyBuilder.FormMBMain.resources
+\\vmware-host\Shared Folders\Legacy-Builder\Sharing_VM\Legacy_Builder\LegacyBuilder\LegacyBuilder\obj\x86\Debug\LegacyBuilder.Properties.Resources.resources
+\\vmware-host\Shared Folders\Legacy-Builder\Sharing_VM\Legacy_Builder\LegacyBuilder\LegacyBuilder\obj\x86\Debug\GenerateResource.read.1.tlog
+\\vmware-host\Shared Folders\Legacy-Builder\Sharing_VM\Legacy_Builder\LegacyBuilder\LegacyBuilder\obj\x86\Debug\GenerateResource.write.1.tlog

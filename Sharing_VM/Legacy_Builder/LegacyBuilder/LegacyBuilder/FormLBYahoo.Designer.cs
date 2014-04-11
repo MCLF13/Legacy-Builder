@@ -39,7 +39,11 @@
             this.labelStocksY = new System.Windows.Forms.Label();
             this.labelCountryY = new System.Windows.Forms.Label();
             this.listViewCountryY = new System.Windows.Forms.ListView();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
             this.menuStrip1.SuspendLayout();
+            this.tabControl1.SuspendLayout();
+            this.tabPage1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -97,16 +101,17 @@
             // 
             this.listViewStocksY.CheckBoxes = true;
             this.listViewStocksY.GridLines = true;
-            this.listViewStocksY.Location = new System.Drawing.Point(219, 65);
+            this.listViewStocksY.Location = new System.Drawing.Point(215, 33);
             this.listViewStocksY.Name = "listViewStocksY";
             this.listViewStocksY.Size = new System.Drawing.Size(347, 350);
             this.listViewStocksY.TabIndex = 1;
             this.listViewStocksY.UseCompatibleStateImageBehavior = false;
+            this.listViewStocksY.View = System.Windows.Forms.View.List;
             // 
             // labelStocksY
             // 
             this.labelStocksY.AutoSize = true;
-            this.labelStocksY.Location = new System.Drawing.Point(216, 49);
+            this.labelStocksY.Location = new System.Drawing.Point(212, 17);
             this.labelStocksY.Name = "labelStocksY";
             this.labelStocksY.Size = new System.Drawing.Size(74, 13);
             this.labelStocksY.TabIndex = 2;
@@ -115,7 +120,7 @@
             // labelCountryY
             // 
             this.labelCountryY.AutoSize = true;
-            this.labelCountryY.Location = new System.Drawing.Point(12, 49);
+            this.labelCountryY.Location = new System.Drawing.Point(8, 17);
             this.labelCountryY.Name = "labelCountryY";
             this.labelCountryY.Size = new System.Drawing.Size(78, 13);
             this.labelCountryY.TabIndex = 3;
@@ -124,21 +129,41 @@
             // listViewCountryY
             // 
             this.listViewCountryY.CheckBoxes = true;
-            this.listViewCountryY.Location = new System.Drawing.Point(12, 65);
+            this.listViewCountryY.Location = new System.Drawing.Point(8, 33);
             this.listViewCountryY.Name = "listViewCountryY";
             this.listViewCountryY.Size = new System.Drawing.Size(188, 133);
             this.listViewCountryY.TabIndex = 4;
             this.listViewCountryY.UseCompatibleStateImageBehavior = false;
+            // 
+            // tabControl1
+            // 
+            this.tabControl1.Controls.Add(this.tabPage1);
+            this.tabControl1.Location = new System.Drawing.Point(0, 27);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(578, 416);
+            this.tabControl1.TabIndex = 5;
+            // 
+            // tabPage1
+            // 
+            this.tabPage1.Controls.Add(this.listViewStocksY);
+            this.tabPage1.Controls.Add(this.labelStocksY);
+            this.tabPage1.Controls.Add(this.labelCountryY);
+            this.tabPage1.Controls.Add(this.listViewCountryY);
+            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(570, 390);
+            this.tabPage1.TabIndex = 0;
+            this.tabPage1.Text = "tabPage1";
+            this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // FormLBYahoo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(578, 444);
-            this.Controls.Add(this.listViewCountryY);
-            this.Controls.Add(this.labelCountryY);
-            this.Controls.Add(this.labelStocksY);
-            this.Controls.Add(this.listViewStocksY);
+            this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.MaximumSize = new System.Drawing.Size(594, 482);
@@ -147,6 +172,9 @@
             this.Text = "LB - Yahoo Finance";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            this.tabControl1.ResumeLayout(false);
+            this.tabPage1.ResumeLayout(false);
+            this.tabPage1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -165,5 +193,7 @@
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem1;
         private System.Windows.Forms.Label labelCountryY;
         public System.Windows.Forms.ListView listViewCountryY;
+        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabPage tabPage1;
     }
 }

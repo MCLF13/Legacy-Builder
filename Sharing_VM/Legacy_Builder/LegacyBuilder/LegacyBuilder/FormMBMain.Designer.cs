@@ -74,6 +74,7 @@
             this.googleFinanceToolStripMenuItem.Name = "googleFinanceToolStripMenuItem";
             this.googleFinanceToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
             this.googleFinanceToolStripMenuItem.Text = "Google Finance";
+            this.googleFinanceToolStripMenuItem.Click += new System.EventHandler(this.googleFinanceToolStripMenuItem_Click);
             // 
             // aboutToolStripMenuItem
             // 

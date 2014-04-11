@@ -156,17 +156,25 @@ namespace LegacyBuilder
              FormLBYahoo1.ShowDialog();
 
          }
-             string cod_url = "";
-             string url;
-             ArrayList ckdlist1 = new ArrayList();
-             ArrayList ckdlist2 = new ArrayList();
-             ArrayList acoes = new ArrayList();
+         private void googleFinanceToolStripMenuItem_Click(object sender, EventArgs e)
+         {
+             FormLBGoogle FormLBGoogle1 = new FormLBGoogle();
+             FormLBGoogle1.ShowDialog();
+         }
 
+
+        string cod_url = "";
+        string url;
+        string url2;
+        ArrayList ckdlist1 = new ArrayList();
+        ArrayList ckdlist2 = new ArrayList();
+        ArrayList acoes = new ArrayList();
+        ArrayList dadoshistoricos = new ArrayList();
 
 
              #region Formação URL
 
-        private void FormacaoURL()
+        public void FormacaoURL()
         {
              FormLBYahoo listViewS = new FormLBYahoo();
 
@@ -210,19 +218,33 @@ namespace LegacyBuilder
              }
              url += cod_url;
         }
+
+        private void FormacaoURL2()
+        {
+ 
+        }
+
              #endregion
 
         
              #region Download
 
-        private void Download()
+        WebClient client = new WebClient();
+
+        public void Download()
         {
-             WebClient client = new WebClient();
-             client.DownloadFile(url, @"\\vmware-host\Shared Folders\Legacy-Builder\Sharing_VM\Legacy_Builder\WindowsFormsApplication4\bin\Debug\Dados.csv");
-        
+            
+            client.DownloadFile(url, @"\\vmware-host\Shared Folders\Legacy-Builder\Sharing_VM\Legacy_Builder\WindowsFormsApplication4\bin\Debug\Dados.csv");
+            
+        }
+        public void DownloadDadosHistoricos()
+        {
+            client.DownloadFile(url, @"\\vmware-host\Shared Folders\Legacy-Builder\Sharing_VM\Legacy_Builder\WindowsFormsApplication4\bin\Debug\Dados.csv");
         }
         
             #endregion
+
+
 
     }
 }
