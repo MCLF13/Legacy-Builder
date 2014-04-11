@@ -41,7 +41,12 @@ namespace LegacyBuilder
             client.DownloadFile(url1, @"\\vmware-host\Shared Folders\Legacy-Builder\Sharing_VM\Legacy_Builder\WindowsFormsApplication4\bin\Debug\Dados.csv"); 
 
 
-            //para mes sera semelhantee ano tambem
+            //para mes sera semelhante e ano tambem
+        }
+
+        private void labelCountryY_Click(object sender, EventArgs e)
+        {
+
         }
       
     }

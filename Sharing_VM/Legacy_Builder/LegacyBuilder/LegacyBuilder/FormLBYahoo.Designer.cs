@@ -31,7 +31,6 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.historicalDataToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.financialsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.balanceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
@@ -40,10 +39,20 @@
             this.labelCountryY = new System.Windows.Forms.Label();
             this.listViewCountryY = new System.Windows.Forms.ListView();
             this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.tbpageFinancials = new System.Windows.Forms.TabPage();
+            this.listView1 = new System.Windows.Forms.ListView();
+            this.label1 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.menuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
-            this.tabPage1.SuspendLayout();
+            this.tbpageFinancials.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -51,7 +60,6 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem,
             this.helpToolStripMenuItem,
-            this.historicalDataToolStripMenuItem,
             this.financialsToolStripMenuItem,
             this.balanceToolStripMenuItem,
             this.helpToolStripMenuItem1});
@@ -72,12 +80,6 @@
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
             this.helpToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
             this.helpToolStripMenuItem.Text = "Tools";
-            // 
-            // historicalDataToolStripMenuItem
-            // 
-            this.historicalDataToolStripMenuItem.Name = "historicalDataToolStripMenuItem";
-            this.historicalDataToolStripMenuItem.Size = new System.Drawing.Size(96, 20);
-            this.historicalDataToolStripMenuItem.Text = "Historical Data";
             // 
             // financialsToolStripMenuItem
             // 
@@ -101,9 +103,9 @@
             // 
             this.listViewStocksY.CheckBoxes = true;
             this.listViewStocksY.GridLines = true;
-            this.listViewStocksY.Location = new System.Drawing.Point(215, 33);
+            this.listViewStocksY.Location = new System.Drawing.Point(347, 33);
             this.listViewStocksY.Name = "listViewStocksY";
-            this.listViewStocksY.Size = new System.Drawing.Size(347, 350);
+            this.listViewStocksY.Size = new System.Drawing.Size(215, 133);
             this.listViewStocksY.TabIndex = 1;
             this.listViewStocksY.UseCompatibleStateImageBehavior = false;
             this.listViewStocksY.View = System.Windows.Forms.View.List;
@@ -111,7 +113,7 @@
             // labelStocksY
             // 
             this.labelStocksY.AutoSize = true;
-            this.labelStocksY.Location = new System.Drawing.Point(212, 17);
+            this.labelStocksY.Location = new System.Drawing.Point(344, 17);
             this.labelStocksY.Name = "labelStocksY";
             this.labelStocksY.Size = new System.Drawing.Size(74, 13);
             this.labelStocksY.TabIndex = 2;
@@ -120,43 +122,146 @@
             // labelCountryY
             // 
             this.labelCountryY.AutoSize = true;
-            this.labelCountryY.Location = new System.Drawing.Point(8, 17);
+            this.labelCountryY.Location = new System.Drawing.Point(196, 17);
             this.labelCountryY.Name = "labelCountryY";
             this.labelCountryY.Size = new System.Drawing.Size(78, 13);
             this.labelCountryY.TabIndex = 3;
             this.labelCountryY.Text = "Select country:";
+            this.labelCountryY.Click += new System.EventHandler(this.labelCountryY_Click);
             // 
             // listViewCountryY
             // 
             this.listViewCountryY.CheckBoxes = true;
-            this.listViewCountryY.Location = new System.Drawing.Point(8, 33);
+            this.listViewCountryY.Location = new System.Drawing.Point(199, 33);
             this.listViewCountryY.Name = "listViewCountryY";
-            this.listViewCountryY.Size = new System.Drawing.Size(188, 133);
+            this.listViewCountryY.Size = new System.Drawing.Size(142, 99);
             this.listViewCountryY.TabIndex = 4;
             this.listViewCountryY.UseCompatibleStateImageBehavior = false;
             // 
             // tabControl1
             // 
-            this.tabControl1.Controls.Add(this.tabPage1);
+            this.tabControl1.Controls.Add(this.tbpageFinancials);
             this.tabControl1.Location = new System.Drawing.Point(0, 27);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(578, 416);
             this.tabControl1.TabIndex = 5;
             // 
-            // tabPage1
+            // tbpageFinancials
             // 
-            this.tabPage1.Controls.Add(this.listViewStocksY);
-            this.tabPage1.Controls.Add(this.labelStocksY);
-            this.tabPage1.Controls.Add(this.labelCountryY);
-            this.tabPage1.Controls.Add(this.listViewCountryY);
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(570, 390);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "tabPage1";
-            this.tabPage1.UseVisualStyleBackColor = true;
+            this.tbpageFinancials.Controls.Add(this.radioButton1);
+            this.tbpageFinancials.Controls.Add(this.button3);
+            this.tbpageFinancials.Controls.Add(this.button2);
+            this.tbpageFinancials.Controls.Add(this.label3);
+            this.tbpageFinancials.Controls.Add(this.textBox2);
+            this.tbpageFinancials.Controls.Add(this.label2);
+            this.tbpageFinancials.Controls.Add(this.textBox1);
+            this.tbpageFinancials.Controls.Add(this.button1);
+            this.tbpageFinancials.Controls.Add(this.label1);
+            this.tbpageFinancials.Controls.Add(this.listView1);
+            this.tbpageFinancials.Controls.Add(this.listViewStocksY);
+            this.tbpageFinancials.Controls.Add(this.labelStocksY);
+            this.tbpageFinancials.Controls.Add(this.labelCountryY);
+            this.tbpageFinancials.Controls.Add(this.listViewCountryY);
+            this.tbpageFinancials.Location = new System.Drawing.Point(4, 22);
+            this.tbpageFinancials.Name = "tbpageFinancials";
+            this.tbpageFinancials.Padding = new System.Windows.Forms.Padding(3);
+            this.tbpageFinancials.Size = new System.Drawing.Size(570, 390);
+            this.tbpageFinancials.TabIndex = 0;
+            this.tbpageFinancials.Text = "Financials";
+            this.tbpageFinancials.UseVisualStyleBackColor = true;
+            // 
+            // listView1
+            // 
+            this.listView1.CheckBoxes = true;
+            this.listView1.GridLines = true;
+            this.listView1.Location = new System.Drawing.Point(199, 215);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(363, 168);
+            this.listView1.TabIndex = 5;
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listView1.View = System.Windows.Forms.View.List;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(196, 199);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(87, 13);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "Select financials:";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(42, 346);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(104, 37);
+            this.button1.TabIndex = 7;
+            this.button1.Text = "Load";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(8, 33);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(185, 30);
+            this.textBox1.TabIndex = 8;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(8, 17);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(82, 13);
+            this.label2.TabIndex = 9;
+            this.label2.Text = "Search country:";
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(8, 90);
+            this.textBox2.Multiline = true;
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(185, 30);
+            this.textBox2.TabIndex = 10;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(8, 74);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(78, 13);
+            this.label3.TabIndex = 11;
+            this.label3.Text = "Search stocks:";
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(114, 138);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(79, 28);
+            this.button2.TabIndex = 12;
+            this.button2.Text = "Search";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(262, 138);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(79, 28);
+            this.button3.TabIndex = 13;
+            this.button3.Text = "Apply";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Location = new System.Drawing.Point(11, 215);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(114, 17);
+            this.radioButton1.TabIndex = 14;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "Get Historical Data";
+            this.radioButton1.UseVisualStyleBackColor = true;
             // 
             // FormLBYahoo
             // 
@@ -173,8 +278,8 @@
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.tabControl1.ResumeLayout(false);
-            this.tabPage1.ResumeLayout(false);
-            this.tabPage1.PerformLayout();
+            this.tbpageFinancials.ResumeLayout(false);
+            this.tbpageFinancials.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -187,13 +292,22 @@
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
         public System.Windows.Forms.ListView listViewStocksY;
         private System.Windows.Forms.Label labelStocksY;
-        private System.Windows.Forms.ToolStripMenuItem historicalDataToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem financialsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem balanceToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem1;
         private System.Windows.Forms.Label labelCountryY;
         public System.Windows.Forms.ListView listViewCountryY;
         private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.TabPage tbpageFinancials;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label1;
+        public System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.RadioButton radioButton1;
     }
 }
