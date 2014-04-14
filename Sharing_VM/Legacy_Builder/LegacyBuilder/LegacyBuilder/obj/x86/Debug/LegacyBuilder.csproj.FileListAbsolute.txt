@@ -29,3 +29,4 @@ C:\Users\Marcius Lima\Documents\GitHub\Legacy-Builder\Sharing_VM\Legacy_Builder\
 \\vmware-host\Shared Folders\Legacy-Builder\Sharing_VM\Legacy_Builder\LegacyBuilder\LegacyBuilder\obj\x86\Debug\LegacyBuilder.Properties.Resources.resources
 \\vmware-host\Shared Folders\Legacy-Builder\Sharing_VM\Legacy_Builder\LegacyBuilder\LegacyBuilder\obj\x86\Debug\GenerateResource.read.1.tlog
 \\vmware-host\Shared Folders\Legacy-Builder\Sharing_VM\Legacy_Builder\LegacyBuilder\LegacyBuilder\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\Marcius Lima\Documents\GitHub\Legacy-Builder\Sharing_VM\Legacy_Builder\LegacyBuilder\LegacyBuilder\obj\x86\Debug\LegacyBuilder.FormLBGoogle.resources

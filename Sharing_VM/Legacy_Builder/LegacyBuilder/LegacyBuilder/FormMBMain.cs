@@ -244,6 +244,11 @@ namespace LegacyBuilder
         
             #endregion
 
+        private void FormMBMain_Load(object sender, EventArgs e)
+        {
+
+        }
+
 
 
     }

@@ -25,6 +25,10 @@ namespace LegacyBuilder
             {
                 listViewStocksY.Items.Add(elemento);
             }
+            foreach (string elemento in frmMBMain.mt1)
+            {
+                listFinancialsY.Items.Add(elemento);
+            }
             
         }
 
@@ -44,10 +48,26 @@ namespace LegacyBuilder
             //para mes sera semelhante e ano tambem
         }
 
-        private void labelCountryY_Click(object sender, EventArgs e)
+        private void balanceToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            
+            //string input = "http://view-source:http://finance.yahoo.com/q/bs?s=AAPL";
+            //string pattern = @"><strong>";
+            //foreach (Match match in Regex.Matches(input, pattern))
+            //{
+            //    Console.WriteLine("Match: {0}", match.Value);
+            //    for (int groupCtr = 0; groupCtr < match.Groups.Count; groupCtr++)
+            //    {
+            //        Group group = match.Groups[groupCtr];
+            //        Console.WriteLine("   Group {0}: {1}", groupCtr, group.Value);
+            //        for (int captureCtr = 0; captureCtr < group.Captures.Count; captureCtr++)
+            //            Console.WriteLine("      Capture {0}: {1}", captureCtr,
+            //                              group.Captures[captureCtr].Value);
+            //    }
+            //}
 
         }
+
       
     }
 }
