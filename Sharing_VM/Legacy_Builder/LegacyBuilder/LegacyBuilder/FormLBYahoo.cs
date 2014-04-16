@@ -48,12 +48,24 @@ namespace LegacyBuilder
             //para mes sera semelhante e ano tambem
         }
 
-        private void balanceToolStripMenuItem_Click(object sender, EventArgs e)
+        private void annualToolStripMenuItem_Click(object sender, EventArgs e)
         {
             
-            //string input = "http://view-source:http://finance.yahoo.com/q/bs?s=AAPL";
+            //download do codigo fonte da pagina da web
+            string codigo_fonte;
+
+            Uri uri = new Uri("http://finance.yahoo.com/q/bs?s=AAPL&annual");
+            WebRequest request = WebRequest.Create(uri);
+            WebResponse response = request.GetResponse();
+
+            Stream strm = response.GetResponseStream();
+            StreamReader reader = new StreamReader(strm);
+
+            codigo_fonte = reader.ReadToEnd();
+            reader.Close();
+
             //string pattern = @"><strong>";
-            //foreach (Match match in Regex.Matches(input, pattern))
+            //foreach (Match match in Regex.Matches(codigo_fonte, pattern))
             //{
             //    Console.WriteLine("Match: {0}", match.Value);
             //    for (int groupCtr = 0; groupCtr < match.Groups.Count; groupCtr++)
@@ -66,8 +78,31 @@ namespace LegacyBuilder
             //    }
             //}
 
+            //abre tab
+            tabControl1.TabPages.Add("Annual Balances");
+
+
         }
 
+        private void quarterlyToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            //download do codigo fonte da pagina da web
+            string codigo_fonte;
+
+            Uri uri = new Uri("http://finance.yahoo.com/q/bs?s=AAPL");
+            WebRequest request = WebRequest.Create(uri);
+            WebResponse response = request.GetResponse();
+
+            Stream strm = response.GetResponseStream();
+            StreamReader reader = new StreamReader(strm);
+
+            codigo_fonte = reader.ReadToEnd();
+            reader.Close();
+
+            //abre tab
+            tabControl1.TabPages.Add("Quarterly Balances");
+        }
       
     }
 }

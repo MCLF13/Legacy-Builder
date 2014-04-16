@@ -31,8 +31,9 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.financialsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.balanceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.annualToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.quaterlyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.listViewStocksY = new System.Windows.Forms.ListView();
             this.labelStocksY = new System.Windows.Forms.Label();
@@ -60,7 +61,6 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem,
             this.helpToolStripMenuItem,
-            this.financialsToolStripMenuItem,
             this.balanceToolStripMenuItem,
             this.helpToolStripMenuItem1});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
@@ -81,18 +81,29 @@
             this.helpToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
             this.helpToolStripMenuItem.Text = "Tools";
             // 
-            // financialsToolStripMenuItem
-            // 
-            this.financialsToolStripMenuItem.Name = "financialsToolStripMenuItem";
-            this.financialsToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
-            this.financialsToolStripMenuItem.Text = "Financials";
-            // 
             // balanceToolStripMenuItem
             // 
+            this.balanceToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.annualToolStripMenuItem,
+            this.quaterlyToolStripMenuItem});
             this.balanceToolStripMenuItem.Name = "balanceToolStripMenuItem";
             this.balanceToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
             this.balanceToolStripMenuItem.Text = "Balance";
-            this.balanceToolStripMenuItem.Click += new System.EventHandler(this.balanceToolStripMenuItem_Click);
+            
+            // 
+            // annualToolStripMenuItem
+            // 
+            this.annualToolStripMenuItem.Name = "annualToolStripMenuItem";
+            this.annualToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.annualToolStripMenuItem.Text = "Annual..";
+            this.annualToolStripMenuItem.Click += new System.EventHandler(this.annualToolStripMenuItem_Click);
+            // 
+            // quaterlyToolStripMenuItem
+            // 
+            this.quaterlyToolStripMenuItem.Name = "quaterlyToolStripMenuItem";
+            this.quaterlyToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.quaterlyToolStripMenuItem.Text = "Quarterly..";
+            this.quaterlyToolStripMenuItem.Click += new System.EventHandler(this.quarterlyToolStripMenuItem_Click);
             // 
             // helpToolStripMenuItem1
             // 
@@ -292,7 +303,6 @@
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
         public System.Windows.Forms.ListView listViewStocksY;
         private System.Windows.Forms.Label labelStocksY;
-        private System.Windows.Forms.ToolStripMenuItem financialsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem balanceToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem1;
         private System.Windows.Forms.Label labelCountryY;
@@ -309,5 +319,7 @@
         private System.Windows.Forms.Label label1;
         public System.Windows.Forms.ListView listFinancialsY;
         private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.ToolStripMenuItem annualToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem quaterlyToolStripMenuItem;
     }
 }

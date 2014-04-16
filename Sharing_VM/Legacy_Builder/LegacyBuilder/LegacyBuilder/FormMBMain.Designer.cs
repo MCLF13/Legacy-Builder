@@ -50,8 +50,8 @@
             // importToolStripMenuItem
             // 
             this.importToolStripMenuItem.Name = "importToolStripMenuItem";
-            this.importToolStripMenuItem.Size = new System.Drawing.Size(119, 22);
-            this.importToolStripMenuItem.Text = "Import...";
+            this.importToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.importToolStripMenuItem.Text = "Import..";
             // 
             // workspacesToolStripMenuItem
             // 
