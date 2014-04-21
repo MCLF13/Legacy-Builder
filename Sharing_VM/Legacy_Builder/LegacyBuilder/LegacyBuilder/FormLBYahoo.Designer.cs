@@ -38,7 +38,6 @@
             this.listViewStocksY = new System.Windows.Forms.ListView();
             this.labelStocksY = new System.Windows.Forms.Label();
             this.labelCountryY = new System.Windows.Forms.Label();
-            this.listViewCountryY = new System.Windows.Forms.ListView();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tbpageFinancials = new System.Windows.Forms.TabPage();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
@@ -51,6 +50,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.listFinancialsY = new System.Windows.Forms.ListView();
+            this.treeView1 = new System.Windows.Forms.TreeView();
             this.menuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tbpageFinancials.SuspendLayout();
@@ -89,19 +89,18 @@
             this.balanceToolStripMenuItem.Name = "balanceToolStripMenuItem";
             this.balanceToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
             this.balanceToolStripMenuItem.Text = "Balance";
-            
             // 
             // annualToolStripMenuItem
             // 
             this.annualToolStripMenuItem.Name = "annualToolStripMenuItem";
-            this.annualToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.annualToolStripMenuItem.Size = new System.Drawing.Size(129, 22);
             this.annualToolStripMenuItem.Text = "Annual..";
             this.annualToolStripMenuItem.Click += new System.EventHandler(this.annualToolStripMenuItem_Click);
             // 
             // quaterlyToolStripMenuItem
             // 
             this.quaterlyToolStripMenuItem.Name = "quaterlyToolStripMenuItem";
-            this.quaterlyToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.quaterlyToolStripMenuItem.Size = new System.Drawing.Size(129, 22);
             this.quaterlyToolStripMenuItem.Text = "Quarterly..";
             this.quaterlyToolStripMenuItem.Click += new System.EventHandler(this.quarterlyToolStripMenuItem_Click);
             // 
@@ -121,6 +120,7 @@
             this.listViewStocksY.TabIndex = 1;
             this.listViewStocksY.UseCompatibleStateImageBehavior = false;
             this.listViewStocksY.View = System.Windows.Forms.View.List;
+           
             // 
             // labelStocksY
             // 
@@ -136,18 +136,9 @@
             this.labelCountryY.AutoSize = true;
             this.labelCountryY.Location = new System.Drawing.Point(196, 17);
             this.labelCountryY.Name = "labelCountryY";
-            this.labelCountryY.Size = new System.Drawing.Size(78, 13);
+            this.labelCountryY.Size = new System.Drawing.Size(114, 13);
             this.labelCountryY.TabIndex = 3;
-            this.labelCountryY.Text = "Select country:";
-            // 
-            // listViewCountryY
-            // 
-            this.listViewCountryY.CheckBoxes = true;
-            this.listViewCountryY.Location = new System.Drawing.Point(199, 33);
-            this.listViewCountryY.Name = "listViewCountryY";
-            this.listViewCountryY.Size = new System.Drawing.Size(142, 99);
-            this.listViewCountryY.TabIndex = 4;
-            this.listViewCountryY.UseCompatibleStateImageBehavior = false;
+            this.labelCountryY.Text = "Select country / index:";
             // 
             // tabControl1
             // 
@@ -160,6 +151,7 @@
             // 
             // tbpageFinancials
             // 
+            this.tbpageFinancials.Controls.Add(this.treeView1);
             this.tbpageFinancials.Controls.Add(this.radioButton1);
             this.tbpageFinancials.Controls.Add(this.button3);
             this.tbpageFinancials.Controls.Add(this.button2);
@@ -173,7 +165,6 @@
             this.tbpageFinancials.Controls.Add(this.listViewStocksY);
             this.tbpageFinancials.Controls.Add(this.labelStocksY);
             this.tbpageFinancials.Controls.Add(this.labelCountryY);
-            this.tbpageFinancials.Controls.Add(this.listViewCountryY);
             this.tbpageFinancials.Location = new System.Drawing.Point(4, 22);
             this.tbpageFinancials.Name = "tbpageFinancials";
             this.tbpageFinancials.Padding = new System.Windows.Forms.Padding(3);
@@ -274,6 +265,13 @@
             this.listFinancialsY.UseCompatibleStateImageBehavior = false;
             this.listFinancialsY.View = System.Windows.Forms.View.List;
             // 
+            // treeView1
+            // 
+            this.treeView1.Location = new System.Drawing.Point(199, 35);
+            this.treeView1.Name = "treeView1";
+            this.treeView1.Size = new System.Drawing.Size(142, 97);
+            this.treeView1.TabIndex = 15;
+            // 
             // FormLBYahoo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -306,7 +304,6 @@
         private System.Windows.Forms.ToolStripMenuItem balanceToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem1;
         private System.Windows.Forms.Label labelCountryY;
-        public System.Windows.Forms.ListView listViewCountryY;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tbpageFinancials;
         private System.Windows.Forms.Button button3;
@@ -321,5 +318,6 @@
         private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.ToolStripMenuItem annualToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem quaterlyToolStripMenuItem;
+        private System.Windows.Forms.TreeView treeView1;
     }
 }

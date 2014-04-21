@@ -21,6 +21,7 @@ namespace LegacyBuilder
         {
             InitializeComponent();
             FormMBMain frmMBMain = new FormMBMain();
+            
             foreach (string elemento in frmMBMain.mt3)
             {
                 listViewStocksY.Items.Add(elemento);
@@ -28,6 +29,11 @@ namespace LegacyBuilder
             foreach (string elemento in frmMBMain.mt1)
             {
                 listFinancialsY.Items.Add(elemento);
+                
+            }
+            foreach (string elemento in frmMBMain.mt4)
+            {
+                treeView1.Nodes.Add(elemento);
             }
             
         }

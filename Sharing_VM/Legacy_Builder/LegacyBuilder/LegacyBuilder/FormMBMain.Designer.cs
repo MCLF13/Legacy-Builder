@@ -113,7 +113,7 @@
             this.MinimumSize = new System.Drawing.Size(698, 486);
             this.Name = "FormMBMain";
             this.Text = "Legacy Builder";
-            this.Load += new System.EventHandler(this.FormMBMain_Load);
+            
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);

@@ -26,7 +26,8 @@ namespace LegacyBuilder
             Formacao_Mt1();
             Formacao_Mt2();
             Formacao_Mt3();
-            //FormacaolistViewStocksY();
+            Formacao_Mt4();
+            Formacao_Mt5();
             int aparicao = Regex.Matches(m_txt_metadados1, "\r").Count;
         }
 
@@ -35,6 +36,8 @@ namespace LegacyBuilder
         string m_txt_metadados1 = "";
         string m_txt_metadados2 = "";
         string m_txt_metadados3 = "";
+        string m_txt_metadados4 = "";
+        string m_txt_metadados5 = "";
 
 
 
@@ -93,11 +96,47 @@ namespace LegacyBuilder
             }
         }
 
+        private void Leitura_metadados4()
+        {
+            string strendereco = Application.ExecutablePath;
+
+            FileInfo fiexcel1 = new FileInfo(strendereco);
+
+            ArrayList arquivos = new ArrayList();
+            arquivos.Add("\\metadados4.txt");
+
+            string strEndCompleto = fiexcel1.DirectoryName + (string)arquivos[0];
+
+            using (StreamReader sr = new StreamReader(strEndCompleto, Encoding.GetEncoding("ISO-8859-1")))
+            {
+                m_txt_metadados4 = sr.ReadToEnd();
+            }
+        }
+
+        private void Leitura_metadados5()
+        {
+            string strendereco = Application.ExecutablePath;
+
+            FileInfo fiexcel1 = new FileInfo(strendereco);
+
+            ArrayList arquivos1 = new ArrayList();
+            arquivos1.Add("\\metadados5.txt");
+
+            string strEndCompleto = fiexcel1.DirectoryName + (string)arquivos1[0];
+
+            using (StreamReader sr = new StreamReader(strEndCompleto, Encoding.GetEncoding("ISO-8859-1")))
+            {
+                m_txt_metadados5 = sr.ReadToEnd();
+            }
+        }
+
 
 
         public ArrayList mt1 = new ArrayList();
         public ArrayList mt2 = new ArrayList();
         public ArrayList mt3 = new ArrayList();
+        public ArrayList mt4 = new ArrayList();
+        public ArrayList mt5 = new ArrayList();
         ArrayList mt3code = new ArrayList();
 
         int aparicao;
@@ -138,14 +177,27 @@ namespace LegacyBuilder
             }
         }
 
-        // private void FormacaolistViewStocksY()
-        //{
-        //    FormLBYahoo listViewS = new FormLBYahoo();
-        //    foreach (string elemento in mt3)
-        //    {
-        //      listViewS.listViewStocksY.Items.Add(elemento);
-        //    }
-        //}
+        private void Formacao_Mt4()
+        {
+            string metadados = m_txt_metadados4;
+            aparicao = Regex.Matches(m_txt_metadados4, "\r").Count;
+            for (int i = 0; i < aparicao; i++)
+            {
+                mt4.Add(metadados.Remove(metadados.IndexOf("#")));
+                metadados = metadados.Substring(metadados.IndexOf("$") + 1);
+            }
+        }
+
+        private void Formacao_Mt5()
+        {
+            string metadados = m_txt_metadados5;
+            aparicao = Regex.Matches(m_txt_metadados5, "\r").Count;
+            for (int i = 0; i < aparicao; i++)
+            {
+                mt5.Add(metadados.Remove(metadados.IndexOf("#")));
+                metadados = metadados.Substring(metadados.IndexOf("$") + 1);
+            }
+        }
 
         #endregion
 
@@ -243,11 +295,6 @@ namespace LegacyBuilder
         }
         
             #endregion
-
-        private void FormMBMain_Load(object sender, EventArgs e)
-        {
-
-        }
 
 
 
