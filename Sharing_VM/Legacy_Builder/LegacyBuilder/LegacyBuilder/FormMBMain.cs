@@ -23,12 +23,10 @@ namespace LegacyBuilder
             Leitura_metadados1();
             Leitura_metadados2();
             Leitura_metadados3();
-            Leitura_metadados4();
             Leitura_metadados5();
             Formacao_Mt1();
             Formacao_Mt2();
             Formacao_Mt3();
-            Formacao_Mt4();
             Formacao_Mt5();
             int aparicao = Regex.Matches(m_txt_metadados1, "\r").Count;
         }
@@ -40,7 +38,6 @@ namespace LegacyBuilder
         string m_txt_metadados3 = "";
         public string m_txt_metadados4 = "";
         public string m_txt_metadados5 = "";
-
 
 
         private void Leitura_metadados1()
@@ -60,8 +57,6 @@ namespace LegacyBuilder
             }
         }
 
-
-
         private void Leitura_metadados2()
         {
             string strendereco = Application.ExecutablePath;
@@ -79,8 +74,6 @@ namespace LegacyBuilder
             }
         }
 
-
-
         private void Leitura_metadados3()
         {
             string strendereco = Application.ExecutablePath;
@@ -95,23 +88,6 @@ namespace LegacyBuilder
             using (StreamReader sr = new StreamReader(strEndCompleto, Encoding.GetEncoding("ISO-8859-1")))
             {
                 m_txt_metadados3 = sr.ReadToEnd();
-            }
-        }
-
-        private void Leitura_metadados4()
-        {
-            string strendereco = Application.ExecutablePath;
-
-            FileInfo fiexcel1 = new FileInfo(strendereco);
-
-            ArrayList arquivos = new ArrayList();
-            arquivos.Add("\\metadados4.txt");
-
-            string strEndCompleto = fiexcel1.DirectoryName + (string)arquivos[0];
-
-            using (StreamReader sr = new StreamReader(strEndCompleto, Encoding.GetEncoding("ISO-8859-1")))
-            {
-                m_txt_metadados4 = sr.ReadToEnd();
             }
         }
 
@@ -133,17 +109,13 @@ namespace LegacyBuilder
         }
 
 
-
         public ArrayList mt1 = new ArrayList();
         public ArrayList mt2 = new ArrayList();
         public ArrayList mt3 = new ArrayList();
-        public ArrayList mt4 = new ArrayList();
         public ArrayList mt5 = new ArrayList();
         ArrayList mt3code = new ArrayList();
 
         int aparicao;
-
-
 
         private void Formacao_Mt1()
         {
@@ -179,19 +151,6 @@ namespace LegacyBuilder
             }
         }
 
-        private void Formacao_Mt4()
-        {
-            
-            string metadados = m_txt_metadados4;
-            aparicao = Regex.Matches(m_txt_metadados4, "#").Count;
-            for (int i = 0; i < aparicao; i++)
-            {
-                mt4.Add(metadados.Remove(metadados.IndexOf("#")));
-                metadados = metadados.Substring(metadados.IndexOf("$") + 1);
-            }
-            
-        }
-
         private void Formacao_Mt5()
         {
             string metadados = m_txt_metadados5;
@@ -218,17 +177,15 @@ namespace LegacyBuilder
              FormLBGoogle1.ShowDialog();
          }
 
+        #region Formação URL
+
 
         string cod_url = "";
         string url;
-        string url2;
         ArrayList ckdlist1 = new ArrayList();
         ArrayList ckdlist2 = new ArrayList();
         ArrayList acoes = new ArrayList();
         ArrayList dadoshistoricos = new ArrayList();
-
-
-             #region Formação URL
 
         public void FormacaoURL()
         {
@@ -275,15 +232,10 @@ namespace LegacyBuilder
              url += cod_url;
         }
 
-        private void FormacaoURL2()
-        {
- 
-        }
+        #endregion
 
-             #endregion
 
-        
-             #region Download
+        #region Download
 
         WebClient client = new WebClient();
 
