@@ -96,17 +96,17 @@ namespace LegacyBuilder
         {
 
             //download do codigo fonte da pagina da web
-            string codigo_fonte;
+            //string codigo_fonte;
 
-            Uri uri = new Uri("http://finance.yahoo.com/q/cp?s=%5ENDX");
-            WebRequest request = WebRequest.Create(uri);
-            WebResponse response = request.GetResponse();
+            //Uri uri = new Uri("http://finance.yahoo.com/q/cp?s=%5ENDX");
+            //WebRequest request = WebRequest.Create(uri);
+            //WebResponse response = request.GetResponse();
 
-            Stream strm = response.GetResponseStream();
-            StreamReader reader = new StreamReader(strm);
+            //Stream strm = response.GetResponseStream();
+            //StreamReader reader = new StreamReader(strm);
 
-            codigo_fonte = reader.ReadToEnd();
-            reader.Close();
+            //codigo_fonte = reader.ReadToEnd();
+            //reader.Close();
 
             //abre tab
             tabControl1.TabPages.Add("Quarterly Balances");
@@ -142,21 +142,21 @@ namespace LegacyBuilder
 
         private void acoes()
         {
-            string acoes1 = client.DownloadString("http://finance.yahoo.com/q/cp?s=%5ENDX");
-            string acoes2 = client.DownloadString("http://finance.yahoo.com/q/cp?s=%5ENDXc=1");
-            string acoes3 = client.DownloadString("http://finance.yahoo.com/q/cp?s=%5ENDX&c=2?s=%5ENDX&c=2");
+            //string acoes1 = client.DownloadString("http://finance.yahoo.com/q/cp?s=%5ENDX");
+            //string acoes2 = client.DownloadString("http://finance.yahoo.com/q/cp?s=%5ENDXc=1");
+            //string acoes3 = client.DownloadString("http://finance.yahoo.com/q/cp?s=%5ENDX&c=2?s=%5ENDX&c=2");
 
-            ArrayList acoes_1 = new ArrayList();
+            //ArrayList acoes_1 = new ArrayList();
 
-            int a = Regex.Matches(acoes1, "</a></b></td><td").Count;
-            for (int i = 0; i < a; i++)
-            {
-                acoes1 = acoes1.Remove(0, acoes1.IndexOf("</a></b></td><td") - 10);
-                int a1 = acoes1.IndexOf("</a></b></td><td");
-                int b = acoes1.IndexOf(">");
-                acoes_1.Add(acoes1.Substring(b + 1, a1 - b - 1));
-                acoes1 = acoes1.Remove(0, a1 + "</a></b></td><td".Length);
-            }
+            //int a = Regex.Matches(acoes1, "</a></b></td><td").Count;
+            //for (int i = 0; i < a; i++)
+            //{
+            //    acoes1 = acoes1.Remove(0, acoes1.IndexOf("</a></b></td><td") - 10);
+            //    int a1 = acoes1.IndexOf("</a></b></td><td");
+            //    int b = acoes1.IndexOf(">");
+            //    acoes_1.Add(acoes1.Substring(b + 1, a1 - b - 1));
+            //    acoes1 = acoes1.Remove(0, a1 + "</a></b></td><td".Length);
+            //}
 
         }
 
@@ -166,30 +166,42 @@ namespace LegacyBuilder
         }
 
 
-        //ArrayList treeview = new ArrayList();
-        //private void treeView1_AfterCheck(object sender, TreeViewEventArgs e)
-        //{
-        //    if (treeview.IndexOf(treeView1.SelectedNode.Name) < 0)
-        //    {
-        //        treeview.Add(treeView1.SelectedNode);
-        //    }
-        //    else
-        //    {
-        //        treeview.Remove(treeView1.SelectedNode);
-        //    }
-        //}
+        ArrayList treeview = new ArrayList();
+        private void treeView1_AfterCheck(object sender, TreeViewEventArgs e)
+        {
+            if (treeview.IndexOf(treeView1.SelectedNode) < 0)
+            {
+                treeview.Add(treeView1.SelectedNode);
+            }
+            else
+            {
+                treeview.Remove(treeView1.SelectedNode);
+            }
+        }
 
-        //private void treeView1_AfterSelect(object sender, TreeViewEventArgs e)
-        //{
-        //    if (treeView1.SelectedNode.Checked == false)
-        //    {
-        //        treeView1.SelectedNode.Checked = true;
-        //    }
-        //    else
-        //    {
-        //        treeView1.SelectedNode.Checked = false;
-        //    }
-        //}
+        private void treeView1_AfterSelect(object sender, TreeViewEventArgs e)
+        {
+            if (treeView1.SelectedNode.Checked == false)
+            {
+                treeView1.SelectedNode.Checked = true;
+            }
+            else
+            {
+                treeView1.SelectedNode.Checked = false;
+            }
+        }
+
+        private void treeView1_BeforeSelect(object sender, TreeViewCancelEventArgs e)
+        {
+            //if (treeView1.CheckBoxes.T == false)
+            //{
+            //    treeView1.SelectedNode.Checked = true;
+            //}
+            //else
+            //{
+            //    treeView1.SelectedNode.Checked = false;
+            //}
+        }
       
     }
 }

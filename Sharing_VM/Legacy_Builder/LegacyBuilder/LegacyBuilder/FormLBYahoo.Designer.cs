@@ -175,11 +175,13 @@
             // treeView1
             // 
             this.treeView1.CheckBoxes = true;
+            this.treeView1.HideSelection = false;
             this.treeView1.Location = new System.Drawing.Point(199, 35);
             this.treeView1.Name = "treeView1";
             this.treeView1.Size = new System.Drawing.Size(142, 97);
             this.treeView1.TabIndex = 15;
             this.treeView1.AfterCheck += new System.Windows.Forms.TreeViewEventHandler(this.treeView1_AfterCheck);
+            this.treeView1.BeforeSelect += new System.Windows.Forms.TreeViewCancelEventHandler(this.treeView1_BeforeSelect);
             this.treeView1.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeView1_AfterSelect);
             // 
             // radioButton1
