@@ -20,7 +20,8 @@ namespace LegacyBuilder
         public FormLBYahoo()
         {
             InitializeComponent();
-            FormMBMain frmMBMain = new FormMBMain();
+            formacaoTreeview1();
+            acoes();
             
             foreach (string elemento in frmMBMain.mt3)
             {
@@ -31,13 +32,14 @@ namespace LegacyBuilder
                 listFinancialsY.Items.Add(elemento);
                 
             }
-            foreach (string elemento in frmMBMain.mt4)
-            {
-                treeView1.Nodes.Add(elemento);
-            }
+            //foreach (string elemento in frmMBMain.mt4)
+            //{
+            //    treeView1.Nodes.Add(elemento);
+            //}
             
         }
 
+        FormMBMain frmMBMain = new FormMBMain();
         string acao;
         string url1;
         WebClient client = new WebClient();
@@ -96,7 +98,7 @@ namespace LegacyBuilder
             //download do codigo fonte da pagina da web
             string codigo_fonte;
 
-            Uri uri = new Uri("http://finance.yahoo.com/q/bs?s=AAPL");
+            Uri uri = new Uri("http://finance.yahoo.com/q/cp?s=%5ENDX");
             WebRequest request = WebRequest.Create(uri);
             WebResponse response = request.GetResponse();
 
@@ -109,6 +111,85 @@ namespace LegacyBuilder
             //abre tab
             tabControl1.TabPages.Add("Quarterly Balances");
         }
+
+        private void formacaoTreeview1()
+        {
+            string mttreeview = frmMBMain.m_txt_metadados5;
+            int aparicao = Regex.Matches(mttreeview, "\r").Count;
+            int node = -1;
+            for (int i = 0; i <= aparicao; i++)
+            {
+                
+                if (mttreeview.IndexOf("&&Legacy") >= 0 && mttreeview.IndexOf("&&Legacy") - mttreeview.IndexOf("#") < 0)
+                {
+                    int a = mttreeview.IndexOf("&&Legacy") + "&&Legacy".Length;
+                    int b = mttreeview.IndexOf("*&");
+                    treeView1.Nodes.Add(mttreeview.Substring(a, b - a));
+                    mttreeview = mttreeview.Remove(mttreeview.IndexOf("&&Legacy"), mttreeview.IndexOf("$") - mttreeview.IndexOf("&&Legacy"));
+                    node = node + 1;
+                }
+                else 
+                {
+                    int a = mttreeview.IndexOf("$") + 1;
+                    int b = mttreeview.IndexOf("#");
+                    treeView1.Nodes[node].Nodes.Add(mttreeview.Substring(a, b - a));
+                    mttreeview = mttreeview.Remove(mttreeview.IndexOf("$"), mttreeview.IndexOf("#") - mttreeview.IndexOf("$") + 1);
+                }
+            }
+
+        }
+
+
+        private void acoes()
+        {
+            string acoes1 = client.DownloadString("http://finance.yahoo.com/q/cp?s=%5ENDX");
+            string acoes2 = client.DownloadString("http://finance.yahoo.com/q/cp?s=%5ENDXc=1");
+            string acoes3 = client.DownloadString("http://finance.yahoo.com/q/cp?s=%5ENDX&c=2?s=%5ENDX&c=2");
+
+            ArrayList acoes_1 = new ArrayList();
+
+            int a = Regex.Matches(acoes1, "</a></b></td><td").Count;
+            for (int i = 0; i < a; i++)
+            {
+                acoes1 = acoes1.Remove(0, acoes1.IndexOf("</a></b></td><td") - 10);
+                int a1 = acoes1.IndexOf("</a></b></td><td");
+                int b = acoes1.IndexOf(">");
+                acoes_1.Add(acoes1.Substring(b + 1, a1 - b - 1));
+                acoes1 = acoes1.Remove(0, a1 + "</a></b></td><td".Length);
+            }
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+
+        //ArrayList treeview = new ArrayList();
+        //private void treeView1_AfterCheck(object sender, TreeViewEventArgs e)
+        //{
+        //    if (treeview.IndexOf(treeView1.SelectedNode.Name) < 0)
+        //    {
+        //        treeview.Add(treeView1.SelectedNode);
+        //    }
+        //    else
+        //    {
+        //        treeview.Remove(treeView1.SelectedNode);
+        //    }
+        //}
+
+        //private void treeView1_AfterSelect(object sender, TreeViewEventArgs e)
+        //{
+        //    if (treeView1.SelectedNode.Checked == false)
+        //    {
+        //        treeView1.SelectedNode.Checked = true;
+        //    }
+        //    else
+        //    {
+        //        treeView1.SelectedNode.Checked = false;
+        //    }
+        //}
       
     }
 }

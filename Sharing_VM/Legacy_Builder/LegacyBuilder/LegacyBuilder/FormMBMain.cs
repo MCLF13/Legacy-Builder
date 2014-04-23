@@ -23,6 +23,8 @@ namespace LegacyBuilder
             Leitura_metadados1();
             Leitura_metadados2();
             Leitura_metadados3();
+            Leitura_metadados4();
+            Leitura_metadados5();
             Formacao_Mt1();
             Formacao_Mt2();
             Formacao_Mt3();
@@ -36,8 +38,8 @@ namespace LegacyBuilder
         string m_txt_metadados1 = "";
         string m_txt_metadados2 = "";
         string m_txt_metadados3 = "";
-        string m_txt_metadados4 = "";
-        string m_txt_metadados5 = "";
+        public string m_txt_metadados4 = "";
+        public string m_txt_metadados5 = "";
 
 
 
@@ -146,7 +148,7 @@ namespace LegacyBuilder
         private void Formacao_Mt1()
         {
             string metadados = m_txt_metadados1;
-            aparicao = Regex.Matches(m_txt_metadados1, "\r").Count;
+            aparicao = Regex.Matches(m_txt_metadados1, "#").Count;
             for (int i = 0; i < aparicao; i++)
             {
                 mt1.Add(metadados.Remove(metadados.IndexOf("#")));
@@ -157,7 +159,7 @@ namespace LegacyBuilder
         private void Formacao_Mt2()
         {
             string metadados = m_txt_metadados2;
-            aparicao = Regex.Matches(m_txt_metadados1, "\r").Count;
+            aparicao = Regex.Matches(m_txt_metadados1, "#").Count;
             for (int i = 0; i < aparicao; i++)
             {
                 mt2.Add(metadados.Remove(metadados.IndexOf("#")));
@@ -179,13 +181,15 @@ namespace LegacyBuilder
 
         private void Formacao_Mt4()
         {
+            
             string metadados = m_txt_metadados4;
-            aparicao = Regex.Matches(m_txt_metadados4, "\r").Count;
+            aparicao = Regex.Matches(m_txt_metadados4, "#").Count;
             for (int i = 0; i < aparicao; i++)
             {
                 mt4.Add(metadados.Remove(metadados.IndexOf("#")));
                 metadados = metadados.Substring(metadados.IndexOf("$") + 1);
             }
+            
         }
 
         private void Formacao_Mt5()

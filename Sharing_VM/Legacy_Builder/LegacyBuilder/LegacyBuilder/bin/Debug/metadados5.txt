@@ -1,3 +1,8 @@
-Nasdaq-100#	     		
-$Dow Jones Industrial Average#      			
-$Nyse Composite#		     	
+&&Legacy United States *&
+$Nasdaq-100#
+
+$Dow Jones Industrial Average#
+
+$Nyse Composite#
+&&Legacy Brazil *&
+$IBovespa#

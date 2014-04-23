@@ -40,6 +40,7 @@
             this.labelCountryY = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tbpageFinancials = new System.Windows.Forms.TabPage();
+            this.treeView1 = new System.Windows.Forms.TreeView();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -50,7 +51,6 @@
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.listFinancialsY = new System.Windows.Forms.ListView();
-            this.treeView1 = new System.Windows.Forms.TreeView();
             this.menuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tbpageFinancials.SuspendLayout();
@@ -120,7 +120,6 @@
             this.listViewStocksY.TabIndex = 1;
             this.listViewStocksY.UseCompatibleStateImageBehavior = false;
             this.listViewStocksY.View = System.Windows.Forms.View.List;
-           
             // 
             // labelStocksY
             // 
@@ -173,6 +172,16 @@
             this.tbpageFinancials.Text = "Financials";
             this.tbpageFinancials.UseVisualStyleBackColor = true;
             // 
+            // treeView1
+            // 
+            this.treeView1.CheckBoxes = true;
+            this.treeView1.Location = new System.Drawing.Point(199, 35);
+            this.treeView1.Name = "treeView1";
+            this.treeView1.Size = new System.Drawing.Size(142, 97);
+            this.treeView1.TabIndex = 15;
+            this.treeView1.AfterCheck += new System.Windows.Forms.TreeViewEventHandler(this.treeView1_AfterCheck);
+            this.treeView1.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeView1_AfterSelect);
+            // 
             // radioButton1
             // 
             this.radioButton1.AutoSize = true;
@@ -192,6 +201,7 @@
             this.button3.TabIndex = 13;
             this.button3.Text = "Apply";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button2
             // 
@@ -264,13 +274,6 @@
             this.listFinancialsY.TabIndex = 5;
             this.listFinancialsY.UseCompatibleStateImageBehavior = false;
             this.listFinancialsY.View = System.Windows.Forms.View.List;
-            // 
-            // treeView1
-            // 
-            this.treeView1.Location = new System.Drawing.Point(199, 35);
-            this.treeView1.Name = "treeView1";
-            this.treeView1.Size = new System.Drawing.Size(142, 97);
-            this.treeView1.TabIndex = 15;
             // 
             // FormLBYahoo
             // 
