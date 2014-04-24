@@ -21,7 +21,9 @@ namespace LegacyBuilder
         {
             InitializeComponent();
             formacaoTreeview1();
-            acoes();
+            acoes_NDX();
+            acoes_DJI();
+            acoes_IBOV();
             
             foreach (string elemento in frmMBMain.mt3)
             {
@@ -32,15 +34,10 @@ namespace LegacyBuilder
                 listFinancialsY.Items.Add(elemento);
                 
             }
-            //foreach (string elemento in frmMBMain.mt4)
-            //{
-            //    treeView1.Nodes.Add(elemento);
-            //}
             
         }
 
         FormMBMain frmMBMain = new FormMBMain();
-        string acao;
         string url1;
         WebClient client = new WebClient();
 
@@ -58,42 +55,13 @@ namespace LegacyBuilder
 
         private void annualToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
-            //download do codigo fonte da pagina da web
-            string codigo_fonte;
-
-            Uri uri = new Uri("http://finance.yahoo.com/q/bs?s=AAPL&annual");
-            WebRequest request = WebRequest.Create(uri);
-            WebResponse response = request.GetResponse();
-
-            Stream strm = response.GetResponseStream();
-            StreamReader reader = new StreamReader(strm);
-
-            codigo_fonte = reader.ReadToEnd();
-            reader.Close();
-
-            //string pattern = @"><strong>";
-            //foreach (Match match in Regex.Matches(codigo_fonte, pattern))
-            //{
-            //    Console.WriteLine("Match: {0}", match.Value);
-            //    for (int groupCtr = 0; groupCtr < match.Groups.Count; groupCtr++)
-            //    {
-            //        Group group = match.Groups[groupCtr];
-            //        Console.WriteLine("   Group {0}: {1}", groupCtr, group.Value);
-            //        for (int captureCtr = 0; captureCtr < group.Captures.Count; captureCtr++)
-            //            Console.WriteLine("      Capture {0}: {1}", captureCtr,
-            //                              group.Captures[captureCtr].Value);
-            //    }
-            //}
-
             //abre tab
             tabControl1.TabPages.Add("Annual Balances");
-
-
         }
 
         private void quarterlyToolStripMenuItem_Click(object sender, EventArgs e)
         {
+<<<<<<< HEAD
 
             //download do codigo fonte da pagina da web
             //string codigo_fonte;
@@ -108,6 +76,8 @@ namespace LegacyBuilder
             //codigo_fonte = reader.ReadToEnd();
             //reader.Close();
 
+=======
+>>>>>>> FETCH_HEAD
             //abre tab
             tabControl1.TabPages.Add("Quarterly Balances");
         }
@@ -136,12 +106,13 @@ namespace LegacyBuilder
                     mttreeview = mttreeview.Remove(mttreeview.IndexOf("$"), mttreeview.IndexOf("#") - mttreeview.IndexOf("$") + 1);
                 }
             }
-
         }
 
+        #region Acoes de Indices EUA
 
-        private void acoes()
+        public void acoes_NDX()
         {
+<<<<<<< HEAD
             //string acoes1 = client.DownloadString("http://finance.yahoo.com/q/cp?s=%5ENDX");
             //string acoes2 = client.DownloadString("http://finance.yahoo.com/q/cp?s=%5ENDXc=1");
             //string acoes3 = client.DownloadString("http://finance.yahoo.com/q/cp?s=%5ENDX&c=2?s=%5ENDX&c=2");
@@ -157,15 +128,220 @@ namespace LegacyBuilder
             //    acoes_1.Add(acoes1.Substring(b + 1, a1 - b - 1));
             //    acoes1 = acoes1.Remove(0, a1 + "</a></b></td><td".Length);
             //}
+=======
+            string acoes1 = client.DownloadString("http://finance.yahoo.com/q/cp?s=%5ENDX");
+            string acoes2 = client.DownloadString("http://finance.yahoo.com/q/cp?s=%5ENDX&c=1");
+            string acoes3 = client.DownloadString("http://finance.yahoo.com/q/cp?s=%5ENDX&c=2?s=%5ENDX&c=2");
+            string nomes1 = client.DownloadString("http://finance.yahoo.com/q/cp?s=%5ENDX");
+            string nomes2 = client.DownloadString("http://finance.yahoo.com/q/cp?s=%5ENDX&c=1");
+            string nomes3 = client.DownloadString("http://finance.yahoo.com/q/cp?s=%5ENDX&c=2?s=%5ENDX&c=2");
 
-        }
 
-        private void button3_Click(object sender, EventArgs e)
-        {
+            ArrayList acoes_1 = new ArrayList();
+            ArrayList acoes_2 = new ArrayList();
+            ArrayList acoes_3 = new ArrayList();
+            ArrayList nomes_1 = new ArrayList();
+            ArrayList nomes_2 = new ArrayList();
+            ArrayList nomes_3 = new ArrayList();
+
+            int a = Regex.Matches(acoes1, "</a></b></td><td").Count;
+            for (int i = 0; i < a; i++)
+            {
+                acoes1 = acoes1.Remove(0, acoes1.IndexOf("</a></b></td><td") - 10);
+                int a1 = acoes1.IndexOf("</a></b></td><td");
+                int b = acoes1.IndexOf(">");
+                acoes_1.Add(acoes1.Substring(b + 1, a1 - b - 1));
+                acoes1 = acoes1.Remove(0, a1 + "</a></b></td><td".Length);
+            }
+            int c = Regex.Matches(acoes2, "</a></b></td><td").Count;
+            for (int i = 0; i < c; i++)
+            {
+                acoes2 = acoes2.Remove(0, acoes2.IndexOf("</a></b></td><td") - 10);
+                int a2 = acoes2.IndexOf("</a></b></td><td");
+                int b1 = acoes2.IndexOf(">");
+                acoes_2.Add(acoes2.Substring(b1 + 1, a2 - b1 - 1));
+                acoes2 = acoes2.Remove(0, a2 + "</a></b></td><td".Length);
+            }
+            int d = Regex.Matches(acoes3, "</a></b></td><td").Count;
+            for (int i = 0; i < d; i++)
+            {
+                acoes3 = acoes3.Remove(0, acoes3.IndexOf("</a></b></td><td") - 10);
+                int a3 = acoes3.IndexOf("</a></b></td><td");
+                int b2 = acoes3.IndexOf(">");
+                acoes_3.Add(acoes3.Substring(b2 + 1, a3 - b2 - 1));
+                acoes3 = acoes3.Remove(0, a3 + "</a></b></td><td".Length);
+            }
+>>>>>>> FETCH_HEAD
+
+            ArrayList acoes_NDX = new ArrayList();
+            foreach (string item in acoes_1)
+            {
+                acoes_NDX.Add(item);
+            }
+            foreach (string item in acoes_2)
+            {
+                acoes_NDX.Add(item);
+            }
+            foreach (string item in acoes_3)
+            {
+                acoes_NDX.Add(item);
+            }
+            int e = Regex.Matches(nomes1, "</a></b></td><td").Count;
+            for (int i = 0; i < e; i++)
+            {
+                nomes1 = nomes1.Remove(0, nomes1.IndexOf("</a></b></td><td") + 25);
+                int a3 = nomes1.IndexOf("</td><td");
+                int b3 = nomes1.IndexOf(">");
+                nomes_1.Add(nomes1.Substring(b3 + 1, a3 - b3 - 1));
+                nomes1 = nomes1.Remove(0, a3 + "</a></b></td><td".Length);
+            }
+            int f = Regex.Matches(nomes2, "</a></b></td><td").Count;
+            for (int i = 0; i < f; i++)
+            {
+                nomes2 = nomes2.Remove(0, nomes2.IndexOf("</a></b></td><td") + 25);
+                int a3 = nomes2.IndexOf("</td><td");
+                int b3 = nomes2.IndexOf(">");
+                nomes_2.Add(nomes2.Substring(b3 + 1, a3 - b3 - 1));
+                nomes2 = nomes2.Remove(0, a3 + "</a></b></td><td".Length);
+            }
+            int g = Regex.Matches(nomes3, "</a></b></td><td").Count;
+            for (int i = 0; i < g; i++)
+            {
+                nomes3 = nomes3.Remove(0, nomes3.IndexOf("</a></b></td><td") + 25);
+                int a3 = nomes3.IndexOf("</td><td");
+                int b3 = nomes3.IndexOf(">");
+                nomes_3.Add(nomes3.Substring(b3 + 1, a3 - b3 - 1));
+                nomes3 = nomes3.Remove(0, a3 + "</a></b></td><td".Length);
+            }
+
+            ArrayList nomes_NDX = new ArrayList();
+            foreach (string item in nomes_1)
+            {
+                nomes_NDX.Add(item);
+            }
+            foreach (string item in nomes_2)
+            {
+                nomes_NDX.Add(item);
+            }
+            foreach (string item in nomes_3)
+            {
+                nomes_NDX.Add(item);
+            }
             
         }
 
+        public void acoes_DJI()
+        {
+            
+            string acoes1 = client.DownloadString("http://finance.yahoo.com/q/cp?s=%5EDJI+Components");
+            string nomes1 = client.DownloadString("http://finance.yahoo.com/q/cp?s=%5EDJI+Components");
 
+            ArrayList acoes_1 = new ArrayList();
+            //ArrayList nomes_1 = new ArrayList();
+            ArrayList acoes_DJI = new ArrayList();
+
+            int a = Regex.Matches(acoes1, "</a></b></td><td").Count;
+            for (int i = 0; i < a; i++)
+            {
+                acoes1 = acoes1.Remove(0, acoes1.IndexOf("</a></b></td><td") - 10);
+                int a1 = acoes1.IndexOf("</a></b></td><td");
+                int b = acoes1.IndexOf(">");
+                acoes_1.Add(acoes1.Substring(b + 1, a1 - b - 1));
+                acoes1 = acoes1.Remove(0, a1 + "</a></b></td><td".Length);
+            }
+
+            acoes_DJI = acoes_1;
+
+            //int d = Regex.Matches(nomes1, "</a></b></td><td").Count;
+            //for (int i = 0; i < d; i++)
+            //{
+            //    nomes1 = nomes1.Remove(0, nomes1.IndexOf("</a></b></td><td") + 25);
+            //    int a2 = nomes1.IndexOf("</td><td ");
+            //    int b1 = nomes1.IndexOf(">");
+            //    nomes_1.Add(acoes1.Substring(b1 + 1, a2 - b1 - 1));
+            //    nomes1 = nomes1.Remove(0, a2 + "</a></b></td><td".Length);
+            //}
+        }
+
+        #endregion
+
+        #region Acoes de Indices Brasil
+
+        public void acoes_IBOV()
+        {
+            string acoes1 = client.DownloadString("http://finance.yahoo.com/q/cp?s=%5EBVSP&c=0");
+            string acoes2 = client.DownloadString("http://finance.yahoo.com/q/cp?s=%5EBVSP&c=1");
+            string nomes1 = client.DownloadString("http://finance.yahoo.com/q/cp?s=%5EBVSP&c=0");
+            string nomes2 = client.DownloadString("http://finance.yahoo.com/q/cp?s=%5EBVSP&c=1");
+            
+
+            ArrayList acoes_1 = new ArrayList();
+            ArrayList acoes_2 = new ArrayList();
+            ArrayList nomes_1 = new ArrayList();
+            ArrayList nomes_2 = new ArrayList();
+            ArrayList acoes_IBOV = new ArrayList();
+            ArrayList nomes_IBOV = new ArrayList();
+            
+
+            int a = Regex.Matches(acoes1, "</a></b></td><td").Count;
+            for (int i = 0; i < a; i++)
+            {
+                acoes1 = acoes1.Remove(0, acoes1.IndexOf("</a></b></td><td") - 10);
+                int a1 = acoes1.IndexOf("</a></b></td><td");
+                int b = acoes1.IndexOf(">");
+                acoes_1.Add(acoes1.Substring(b + 1, a1 - b - 1));
+                acoes1 = acoes1.Remove(0, a1 + "</a></b></td><td".Length);
+            }
+            int c = Regex.Matches(acoes2, "</a></b></td><td").Count;
+            for (int i = 0; i < c; i++)
+            {
+                acoes2 = acoes2.Remove(0, acoes2.IndexOf("</a></b></td><td") - 10);
+                int a2 = acoes2.IndexOf("</a></b></td><td");
+                int b1 = acoes2.IndexOf(">");
+                acoes_2.Add(acoes2.Substring(b1 + 1, a2 - b1 - 1));
+                acoes2 = acoes2.Remove(0, a2 + "</a></b></td><td".Length);
+            }
+
+            foreach (string item in acoes_1)
+            {
+                acoes_IBOV.Add(item);
+            }
+            foreach (string item in acoes_2)
+            {
+                acoes_IBOV.Add(item);
+            }
+
+            int d = Regex.Matches(nomes1, "</a></b></td><td").Count;
+            for (int i = 0; i < d; i++)
+            {
+                nomes1 = nomes1.Remove(0, nomes1.IndexOf("</a></b></td><td") + 25);
+                int a3 = nomes1.IndexOf("</td><td");
+                int b3 = nomes1.IndexOf(">");
+                nomes_1.Add(nomes1.Substring(b3 + 1, a3 - b3 - 1));
+                nomes1 = nomes1.Remove(0, a3 + "</a></b></td><td".Length);
+            }
+            int e = Regex.Matches(nomes2, "</a></b></td><td").Count;
+            for (int i = 0; i < e; i++)
+            {
+                nomes2 = nomes2.Remove(0, nomes2.IndexOf("</a></b></td><td") + 25);
+                int a3 = nomes2.IndexOf("</td><td");
+                int b3 = nomes2.IndexOf(">");
+                nomes_2.Add(nomes2.Substring(b3 + 1, a3 - b3 - 1));
+                nomes2 = nomes2.Remove(0, a3 + "</a></b></td><td".Length);
+            }
+
+            foreach (string item in nomes_1)
+            {
+                nomes_IBOV.Add(item);
+            }
+            foreach (string item in nomes_2)
+            {
+                nomes_IBOV.Add(item);
+            }
+        }
+        #endregion
+
+<<<<<<< HEAD
         ArrayList treeview = new ArrayList();
         private void treeView1_AfterCheck(object sender, TreeViewEventArgs e)
         {
@@ -202,6 +378,9 @@ namespace LegacyBuilder
             //    treeView1.SelectedNode.Checked = false;
             //}
         }
+=======
+       
+>>>>>>> FETCH_HEAD
       
     }
 }
